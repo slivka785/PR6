@@ -1,1 +1,13 @@
+cmake_minimum_required(VERSION 3.5.2)
+project(Polina25)
 
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+find_package(Threads REQUIRED)
+
+add_executable(task1 task1.c)
+add_executable(task2 task2.c)
+
+target_link_libraries(task1 Threads::Threads)
+target_link_libraries(task2 Threads::Threads) 
